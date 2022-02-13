@@ -1,38 +1,212 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#0e1e25;
+}
+.header {
+    text-align: center;
+    height: 7rem;
+}
+.header h1 {
+    color: #e31c25;
+    padding-top: 1rem;
+    margin-bottom: 0.2rem;
+    font-size: 2.3rem;
+}
+.underline {
+    margin: 0 auto;
+    height: 3px;
+    width: 7rem;
+    border-radius: 10px;
+    background-color: aqua;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form {
+    margin: 1rem auto;
+    width: 50vw;
+}
+.form-control {
+    display: flex;
+}
+.input {
+    text-transform: capitalize;
+    width: 100%;
+}
+.input,
+.btn {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0.4rem 0.75rem;
+    font-size: 1.4rem;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.input::placeholder{
+color: rgb(104, 102, 102);
+}
+.btn:hover {
+    cursor: pointer;
+    color: rgb(8, 221, 8);
+}
+.movie {
+    display: grid;
+    width: 85vw;
+    margin: 3rem auto;
+    gap: 2rem;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    justify-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    height: 25rem;
+    width: 20rem;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.container img {
+    box-shadow: 0 5px 17px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.container:hover .info {
+    cursor: pointer;
+    transform: translateY(0);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-in-out;
+    justify-content: space-around;
+    text-align: center;
+}
+.info h2 {
+    font-size: 1.8rem;
+    font-family: "Lato", sans-serif;
+    /* color: #e31c25; */
+    color: white;
+    padding: 0 1rem;
+}
+.lower {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.5rem;
+}
+.lower p {
+    margin: 1rem 0;
+}
+
+.footer {
+    background-color: #0c1a20;
+
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Lato";
+    padding: 2rem;
+    line-height: 1.4;
+    word-spacing: 3px;
+}
+.footer p a {
+    color: aliceblue;
+}
+
+.movieDetail {
+    margin: 2rem auto;
+    width: 80vw;
+    display: flex;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    justify-content: space-between;
+}
+.single-info {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
+.single-info h2 {
+    align-self: center;
+    font-size: 2.3rem;
+    text-transform: uppercase;
+    color: #b33339;
+}
+.plot {
+    margin: 2rem 0;
+    font-family: "Lato";
+    font-size: 1.4rem;
+    text-align: justify;
+}
+.cast {
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+.line {
+    display: flex;
+    margin: 0.5rem 1rem;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.single-btn {
+    align-self: center;
+    margin-top: 2rem;
+    width: 30%;
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    font-family: "Lato";
+    color: white;
+    background-color: #b33339;
+    border: none;
+}
+.fix {
+    text-align: center;
+}
+
+.single-btn:hover {
+    cursor: pointer;
+    background-color: #e31c25;
+}
+
+.loading{
+    text-align: center;
+    height: 90vh;
+   
+}
+.error{
+    color: red;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.errorDetail{
+   height: 50vh;
+    text-align: center;
+   color: red;
+
+}
+.errorDetail h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.8rem;
+    margin-top: 4rem;
 }
