@@ -6,7 +6,7 @@
 
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color:#0e1e25;
+    background-color: #0e1e25;
 }
 .header {
     text-align: center;
@@ -47,8 +47,8 @@ body {
     color: white;
     border-bottom: 2px solid white;
 }
-.input::placeholder{
-color: rgb(104, 102, 102);
+.input::placeholder {
+    color: rgb(104, 102, 102);
 }
 .btn:hover {
     cursor: pointer;
@@ -59,7 +59,7 @@ color: rgb(104, 102, 102);
     width: 85vw;
     margin: 3rem auto;
     gap: 2rem;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
 
@@ -187,26 +187,79 @@ color: rgb(104, 102, 102);
     background-color: #e31c25;
 }
 
-.loading{
+.loading {
     text-align: center;
     height: 90vh;
-   
 }
-.error{
+.error {
     color: red;
     margin-left: 1rem;
     font-size: 1.2rem;
     font-weight: 600;
 }
 
-.errorDetail{
-   height: 50vh;
+.errorDetail {
+    height: 50vh;
     text-align: center;
-   color: red;
-
+    color: red;
 }
-.errorDetail h2{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+.errorDetail h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.8rem;
     margin-top: 4rem;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .movie {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .form{
+        width:70vw;
+    }
+    .movieDetail{
+        flex-direction: column;
+        width: 85vw;
+    }
+    .single-info{
+        margin-top: 2rem;
+        width: 85vw;
+    }
+    .line{
+        flex-direction: column;
+    }
+    .single-btn{
+        width: auto;
+    }
+    .line{
+        text-align: center;
+
+    }
+    .line h3{
+        margin: 0.5rem 0;
+
+    }
+    
+}
+
+@media (max-width:750px) {
+    .movie{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .form{
+        width: 80vw;
+    }
+    .cast{
+        font-size: 1.4rem;
+    }
+    .line{
+        font-size: 1rem;
+    }
+    .movieDetail img{
+        width: 100%;
+    }
+    .plot{
+        font-size: 1.3rem;
+    }
 }

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 import data from './data'
 
-export const mainUrl = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_KEY}`
+export const mainUrl = `https://www.omdbapi.com/?apikey=a4b41733`
 
 
 const AppContext = React.createContext()
